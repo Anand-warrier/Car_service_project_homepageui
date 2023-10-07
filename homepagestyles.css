@@ -1,0 +1,167 @@
+@font-face {
+  font-family: "RacingSansOne-Regular";
+  src: url("assets/fonts/RacingSansOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Archivo-italic";
+  src: url("assets/fonts/archivo.ttf") format("truetype");
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.homepageleftdiv {
+  height: 100%;
+  width: 50%;
+  float: 1;
+  background-color: #1f242d;
+}
+.homepagerightdiv {
+  height: 100%;
+  width: 50%;
+  float: 1;
+
+  background-image: url("assets/images/homepagebackground.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 29, 34, 0.541);
+}
+.homepagecentertext {
+  position: absolute;
+  top: 5%;
+
+  transform: translate(5%);
+}
+.homepagecentertext h1 {
+  font-family: "RacingSansOne-Regular";
+  color: white;
+  font-size: 120px;
+  line-height: 100px;
+  margin-bottom: 10px;
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.highlighted-text {
+  padding: 5px;
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+}
+
+.homepagecentertext h3 {
+  font-family: "Archivo-italic";
+  color: white;
+  line-height: 20px;
+  animation: fadeInH1 5s forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+@keyframes fadeInH1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.featurelisting {
+  animation: fadeInfeatures 5s forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+@keyframes fadeInfeatures {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.homepagecentertext img {
+  filter: invert(100%);
+  display: inline-block;
+  vertical-align: middle;
+}
+.homepagecentertext p {
+  font-family: "Archivo-italic";
+  color: white;
+  display: inline-block;
+  vertical-align: middle;
+}
+.signinupdiv {
+  position: relative;
+  left: 50%;
+  top: 1%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50%;
+}
+button {
+  font-size: 14px;
+  position: relative;
+  margin: 12px;
+  padding: 1em 2.5em 1em 2.5em;
+  border: none;
+  background: #323946;
+  transition: all 0.1s linear;
+  box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+  min-width: 117.44px;
+  max-width: fit-content;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button span {
+  color: white;
+  font-weight: bold;
+}
+
+button .border {
+  position: absolute;
+  border: 0.15em solid #323946;
+  transition: all 0.3s 0.08s linear;
+  top: 50%;
+  left: 50%;
+  width: 9em;
+  height: 3em;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+button:hover .border {
+  display: block;
+  width: 9.9em;
+  height: 3.7em;
+  opacity: 1;
+}
+
+.full-rounded {
+  border-radius: 2em;
+}
